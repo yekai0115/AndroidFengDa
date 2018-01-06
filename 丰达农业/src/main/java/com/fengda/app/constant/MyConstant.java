@@ -37,10 +37,9 @@ public class MyConstant {
     public static final int DEF_IMG_H = 640;
 
     /**阿里云EndPoint*/
-    public static final String ALI_ENDPOINT = "http ://oss-cn-shenzhen.aliyuncs.com";
+    public static final String ALI_ENDPOINT = "http://oss-cn-shenzhen.aliyuncs.com";
     public static final String ALI_KEYID = "LTAIvHGYyxQXtl2K";
     public static final String ALI_KEYSECRET = "XfEFIm4oFBeFtXvitvWrRk7HcoTIpV";
-
 
     /**上传下载的bucketName*/
     public static final String ALI_BUCKET_RECOMMEND = "fd-private-personal"; //
