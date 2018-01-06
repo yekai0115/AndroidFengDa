@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_round_rect_bg"
+    android:orientation="vertical">
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.fengda.app.widget.viewpager.LoopViewPager
+            android:id="@+id/ve_notify"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <com.fengda.app.widget.viewpager.MaterialIndicator
+            android:id="@+id/bannerIndicator"
+            style="@style/MaterialIndicator.Demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="17dp" />
+    </FrameLayout>
+
+
+
+
+
+
+
+</LinearLayout>

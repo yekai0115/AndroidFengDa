@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fengda.app">
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 主页面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <!-- 登录 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+
+        <!-- 验证支付密码 -->
+        <activity
+            android:name=".activity.VerifyPayPwdActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+
+        <!-- 引导页 -->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".activity.ForgetPwdActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".activity.ForgetPwdNextActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 兑换 -->
+        <activity
+            android:name=".activity.ExchangeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.Slidr.Slidable"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 兑换 -->
+        <activity
+            android:name=".activity.AssemblingPlanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.Slidr.Slidable"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 兑换 -->
+        <activity
+            android:name=".activity.PomeloBuyListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.Slidr.Slidable"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 兑换列表 -->
+        <activity
+            android:name=".activity.ExchangeListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.Slidr.Slidable"><!-- stateVisible|adjustResize -->
+        </activity>
+
+        <!-- 报单 -->
+        <activity
+            android:name=".activity.DeclarationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 团队 -->
+        <activity
+            android:name=".activity.MyTeamListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+
+        <!-- 排行榜 -->
+        <activity
+            android:name=".activity.MyLeaderboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 获取兑换设置密码验证码 -->
+        <!-- 确认支付密码 -->
+        <activity
+            android:name=".activity.ConfirmPayPwdActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 忘记支付密码 -->
+
+
+        <!-- 绑定或修改身份信息 -->
+        <activity
+            android:name=".activity.CertificationBindUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+
+
+        <!-- 绑定或修改银行卡 -->
+        <activity
+            android:name=".activity.BindBankActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 绑定或修改银行卡 -->
+        <!-- 绑定或修改银行卡 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 设置支付密码 -->
+        <activity
+            android:name=".activity.SetPayPwdActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 设置支付密码下一步 -->
+        <activity
+            android:name=".activity.SetPayPwdNextActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 我的消息列表 -->
+        <activity
+            android:name=".activity.MyMessageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 关于我们 -->
+        <activity
+            android:name=".activity.MyWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 设置 -->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+        <!-- 激活好友 -->
+        <!-- 激活会员 -->
+        <!-- 明额明细 -->
+        <!-- 库存余额 -->
+        <!-- 库存明细 -->
+        <!-- 提货 -->
+
+
+        <!-- 订单中心 -->
+        <activity
+            android:name=".activity.MailOrderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"><!-- stateVisible|adjustResize -->
+        </activity>
+
+
+        <!--收货地址列表管理页面-->
+        <activity
+            android:name=".activity.AddressMangeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+        <!-- 新增收货地址、编辑列表页面 -->
+        <activity
+            android:name=".activity.AddressEditActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <!-- 商品详情页面 -->
+        <activity
+            android:name=".activity.GoodsDetalActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+
+        <!-- 确认订单页面 -->
+        <activity
+            android:name=".activity.SubmitCarOrderActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!--选择收货地址列表页面-->
+        <activity
+            android:name=".activity.AddressChooseActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!--支付订单页面-->
+
+        <!--支付成功页面-->
+        <activity
+            android:name=".activity.PaySuccessActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!--银行卡验证码-->
+        <activity
+            android:name=".activity.VerifyBankCardActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+        <!--图片浏览页面-->
+        <activity
+            android:name=".activity.ImagePagerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+        <!--好友管理页面-->
+        <activity
+            android:name=".activity.RecommendActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+        <!--物流页面-->
+        <activity
+            android:name=".activity.OrderWuliuActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+        <!--普通订单详情页面-->
+        <activity
+            android:name=".activity.OrderDetalActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+
+
+
+        <!--修改银行卡页面-->
+        <activity
+            android:name=".activity.UpdateBindBankActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+        <!--鼓励积分、货款奖励记录页面-->
+        <activity
+            android:name=".activity.PraiseListActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!--推荐页面-->
+        <activity
+            android:name=".activity.MyRecommendActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!--商品列表页面-->
+        <activity
+            android:name=".activity.GoodsListActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+
+        <!--分类商品列表页面-->
+        <activity
+            android:name=".activity.CategoryGoodsListActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+        <!--消息详情-->
+        <activity
+            android:name=".activity.MyMessageDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!-- 搜索 -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            ><!-- stateVisible|adjustResize -->
+        </activity>
+
+        <!-- 修改昵称 -->
+        <activity
+            android:name=".activity.UpdateNickActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!-- 商品收藏页面 -->
+        <activity
+            android:name=".activity.GoodsCollectActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!-- 金柚订单页面 -->
+        <activity
+            android:name=".activity.AssemblingOrderActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+        <!-- 购物车页面 -->
+        <activity
+            android:name=".activity.ShoppingCarActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!-- 团队待产果/产果明细页面 -->
+        <activity
+            android:name=".activity.TeamFruitListActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Slidr.Slidable" />
+
+        <!--qq登录、分享配置-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106459990" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--qq登录配置-->
+
+
+        <!--支付宝配置-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+
+        <!--微信配置-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 百度自动更新sdk配置 -->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="10612198" />
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="ogwyi2BYG1x4spzxpIYRGl9KR1wGfmje" />
+
+        <!-- android:authorities="包名.fileprovider"将“包名”替换为实际包名 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.fengda.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bdp_update_filepaths" />
+        </provider>
+
+        <meta-data android:value="5a4374b1b27b0a2cb300000d" android:name="UMENG_APPKEY"/>
+    </application>
+
+</manifest>

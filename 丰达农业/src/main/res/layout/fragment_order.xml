@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fengda.app.view.statelayout.StateLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.fengda.app.view.pulltorefresh.PullLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+
+            <com.fengda.app.view.pullableview.PullableRefreshScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <com.fengda.app.widget.MyListView
+                        android:id="@+id/lv_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/bg_blank_color"
+                        android:dividerHeight="10dp" />
+                </LinearLayout>
+
+            </com.fengda.app.view.pullableview.PullableRefreshScrollView>
+
+            <include layout="@layout/load_more" />
+        </com.fengda.app.view.pulltorefresh.PullLayout>
+
+    </LinearLayout>
+
+</com.fengda.app.view.statelayout.StateLayout>

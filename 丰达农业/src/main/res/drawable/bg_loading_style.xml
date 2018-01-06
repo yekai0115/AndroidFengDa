@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <gradient android:startColor="@color/line_e5"
+                android:endColor="@color/line_e5"  android:angle="360"/>
+            <stroke android:width="0.5dp" android:color="@color/line_e5"></stroke>
+
+        </shape>
+    </item>
+
+
+</selector>
+
+    <!-- 浅灰色背景，边框是灰色-->

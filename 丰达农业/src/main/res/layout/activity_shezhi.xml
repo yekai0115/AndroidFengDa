@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/shezhi" />
+
+
+    <com.fengda.app.widget.StretchScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_tuichu"
+        android:layout_below="@+id/top_nvg_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/logo_linear"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/tv_set_logo"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <ImageView
+                        android:id="@+id/img_login"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/logo_right"
+                        android:background="@drawable/round_style4"
+                        android:contentDescription="@null"
+                        android:paddingRight="5dp" />
+
+                    <ImageView
+                        android:id="@+id/logo_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/icon_right"
+                        android:contentDescription="@null" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/name_linear"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/logo_linear"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_click"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/tv_set_nick"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:id="@+id/nick_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/name_right"
+                        android:gravity="center_vertical"
+                        android:paddingRight="5dp"
+                        android:text="昵称"
+                        android:textColor="@color/tv_color6"
+                        android:textSize="@dimen/size_14" />
+
+                    <ImageView
+                        android:id="@+id/name_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/icon_right"
+                        android:contentDescription="@null" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_linear"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_myaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableRight="@drawable/icon_right"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/tv_39"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/bg_color2"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/tv_set_40"
+                    android:textColor="@color/tv_color16"
+                    android:textSize="@dimen/size_13" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_set_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_click"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:text="@string/tv_set_pw"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/icon_right"
+                        android:gravity="center_vertical"
+                        android:paddingRight="15dp"
+                        android:text="修改"
+                        android:textColor="@color/tv_color6"
+                        android:textSize="@dimen/size_14" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/line_color" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_set_pay_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_click"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/tv_set_pay_pw"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:id="@+id/pwd_settint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/icon_right"
+                        android:gravity="center_vertical"
+                        android:paddingRight="15dp"
+                        android:text="未设置"
+                        android:textColor="@color/color33"
+                        android:textSize="@dimen/size_14" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_click"
+                        android:drawableRight="@drawable/icon_right"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/contact_kefu"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_click"
+                        android:drawableRight="@drawable/icon_right"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/about"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_click"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:text="@string/version"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|right"
+                        android:paddingRight="15dp"
+                        android:text="1.0"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.fengda.app.widget.StretchScrollView>
+
+    <Button
+        android:id="@+id/btn_tuichu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:text="@string/exit"
+        android:textColor="@color/bg_main_bottom51"
+        android:textSize="@dimen/size_16" />
+</RelativeLayout>

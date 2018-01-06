@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:title="@string/tishi_21" />
+
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_blank_color"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_blank_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="18dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/tishi_44"
+                    android:textColor="@color/tv_62"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:id="@+id/tv_friends_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/tv_62"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/tishi_45"
+                    android:textColor="@color/tv_62"
+                    android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+
+            <com.fengda.app.view.pulltorefresh.PullLayout
+                android:id="@+id/refresh_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/refresh_head" />
+
+                <com.fengda.app.view.pullableview.PullableListView
+                    android:id="@+id/lv_friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:divider="@color/line_color"
+                    android:dividerHeight="0.5dp"/>
+
+                <include layout="@layout/load_more" />
+            </com.fengda.app.view.pulltorefresh.PullLayout>
+
+        </LinearLayout>
+
+    </com.fengda.app.view.statelayout.StateLayout>
+
+</LinearLayout>

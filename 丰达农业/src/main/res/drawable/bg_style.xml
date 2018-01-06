@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+
+    
+    
+    <!-- 默认效果   #FF9100    @color/white-->
+    <item>
+        <shape>
+			<gradient android:startColor="@color/white" android:endColor="@color/white"  android:angle="270"/>
+			<corners android:radius="10dp"/>
+			<stroke android:width="0.5dp" android:color="@color/white"></stroke>
+			
+		</shape>
+    </item>
+    
+    
+</selector>
+
+<!-- 浅灰色背景，边框是灰色-->

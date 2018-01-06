@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/searcher_title_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:id="@+id/searcher_linear"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/aser_round_searcher_border"
+            android:gravity="center">
+
+            <com.fengda.app.view.HandyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/home_search"
+                android:drawablePadding="4.5dp"
+                android:gravity="center"
+                android:text="搜索商品"
+                android:textColor="@color/text_main_color"
+                android:textSize="@dimen/size_13" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.fengda.app.view.pulltorefresh.PullLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+
+            <com.fengda.app.view.pullableview.PullableRefreshScrollView
+                android:id="@+id/mScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:id="@+id/rl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <FrameLayout
+                            android:id="@+id/fl_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical">
+
+                            <com.fengda.app.widget.viewpager.LoopViewPager
+                                android:id="@+id/ve_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp" />
+
+                            <com.fengda.app.widget.viewpager.MaterialIndicator
+                                android:id="@+id/bannerIndicator"
+                                style="@style/MaterialIndicator.Demo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginBottom="17dp" />
+                        </FrameLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="94dp"
+                            android:background="@color/white"
+                            android:paddingTop="13.5dp"
+                            android:paddingBottom="12dp">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/viewpager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <LinearLayout
+                                android:id="@+id/ll_dot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center"
+                                android:orientation="horizontal" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+                            <ImageView
+                                android:id="@+id/iv_invite_friends_banner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/label1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="138.5dp"
+                            android:paddingBottom="16dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/introduce_banner1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/bg_blank_color" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/introduce_banner2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="2.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/bg_blank_color" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/introduce_banner3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/iv_jump"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/label2" />
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/line_color" />
+
+                            <com.fengda.app.widget.MyListView
+                                android:id="@+id/lv_recommend"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:background="@color/white"
+                                android:cacheColorHint="#00000000"
+                                android:divider="@color/line_color"
+                                android:dividerHeight="0.5dp"
+                                android:listSelector="@android:color/transparent"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  </com.ddz.app.widget.StretchScrollView>   -->
+
+                </RelativeLayout>
+            </com.fengda.app.view.pullableview.PullableRefreshScrollView>
+
+            <include layout="@layout/load_more" />
+        </com.fengda.app.view.pulltorefresh.PullLayout>
+
+
+    </FrameLayout>
+</LinearLayout>

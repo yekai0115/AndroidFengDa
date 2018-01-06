@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_blank_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/tv_71" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_botttom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="17dp"
+            android:gravity="center|left"
+            android:text="@string/shifukuan"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_16" />
+
+
+        <TextView
+            android:id="@+id/tv_shifukuan"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="19dp"
+            android:gravity="center|right"
+            android:text="200"
+            android:textColor="@color/tv_color3"
+            android:textSize="@dimen/size_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|right">
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main_bottom"
+                android:gravity="center"
+                android:text="@string/submit_order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.fengda.app.widget.StretchScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_nvg_bar"
+        android:layout_above="@id/ll_botttom"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_blank_color"
+            android:orientation="vertical">
+
+            <!-- 选择地址 -->
+
+            <LinearLayout
+                android:id="@+id/ll_chose_dizhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/buy_wire" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_no_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="11dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/buy_address" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/icon_right_black"
+                        android:gravity="center|left"
+                        android:text="@string/tishi_6"
+                        android:textColor="@color/tv_color16"
+                        android:textSize="@dimen/size_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="11dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/buy_address" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="17.5dp"
+                            android:layout_marginTop="17.5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_sh_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center|left"
+                                    android:text="测试"
+                                    android:textColor="@color/tv_color2"
+                                    android:textSize="@dimen/size_15" />
+
+                                <TextView
+                                    android:id="@+id/tv_phone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center|left"
+                                    android:text="18813904075"
+                                    android:textColor="@color/tv_color2"
+                                    android:textSize="@dimen/size_15" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="13dp"
+                                android:text="18813904075"
+                                android:textColor="@color/tv_color16"
+                                android:textSize="@dimen/size_14" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/app_name"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:src="@drawable/icon_right_black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 选择地址结束 -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/buy_shop"
+                android:drawablePadding="5.5dp"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:text="@string/tishi_2"
+                android:textColor="@color/tv_color2"
+                android:textSize="@dimen/size_15" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+
+
+            <com.fengda.app.widget.MyListView
+                android:id="@+id/lv_carOrder"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@color/bg_blank_color"
+                android:dividerHeight="5dp"
+                android:scrollbars="none" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center|right"
+                android:background="@color/white"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center|left"
+                    android:text="@string/tishi_7"
+                    android:textColor="@color/tv_color16"
+                    android:textSize="@dimen/size_15" />
+
+                <TextView
+                    android:id="@+id/tv_all_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center|left"
+                    android:text="2"
+                    android:textColor="@color/tv_color16"
+                    android:textSize="@dimen/size_15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center|right"
+                    android:text="@string/tishi_8"
+                    android:textColor="@color/tv_color16"
+                    android:textSize="@dimen/size_15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|right"
+                    android:text="@string/tishi_9"
+                    android:textColor="@color/tv_color16"
+                    android:textSize="@dimen/size_15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center|right"
+                    android:text="@string/tv_57"
+                    android:textColor="@color/tv_color3"
+                    android:textSize="@dimen/size_13" />
+
+                <TextView
+                    android:id="@+id/tv_xiaoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|right"
+                    android:text="100"
+                    android:textColor="@color/tv_color3"
+                    android:textSize="@dimen/size_18" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_point"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_goods_point_need"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center|left"
+                    android:text="@string/tishi_1"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+
+                <com.fengda.app.widget.swichbutton.ToggleButton
+                    android:id="@+id/switch_ziti"
+                    android:layout_width="54dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center|left|bottom"
+                android:paddingBottom="9dp"
+                android:paddingLeft="15dp"
+                android:text="@string/tishi_82"
+                android:textColor="@color/color36" />
+
+            <RelativeLayout
+                android:id="@+id/rl_weixin"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/buy_weixin"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dp"
+                    android:text="@string/tv_60"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_weixin"
+                    style="@style/payCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="53dp"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_zhifubao"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/buy_zhifubao"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dp"
+                    android:text="@string/tv_61"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_zhifubao"
+                    style="@style/payCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="53dp"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_yinlian"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="31dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/buy_card"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dp"
+                    android:text="@string/tv_62"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_card"
+                    style="@style/payCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </com.fengda.app.widget.StretchScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        custom:lvisible="true"
+        custom:right="@string/bianji"
+        custom:rvisible="true"
+        custom:title="@string/my_collect_goods" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_delete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_blank_color" />
+
+        <CheckBox
+            android:id="@+id/cb_all"
+            style="@style/CommCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="9dp"
+            android:text="全选"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_15" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_main_bottom"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16" />
+    </RelativeLayout>
+
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_delete"
+        android:layout_below="@id/top_nvg_bar"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+
+
+        <com.fengda.app.view.pulltorefresh.PullLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+
+            <!-- android:layoutAnimation="@anim/navagation_gridview_anim" -->
+
+            <com.fengda.app.view.pullableview.swipe.SwipeMenuListView
+                android:id="@+id/lv_goods"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/line_color"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@color/toming"
+                android:scrollbars="none" />
+
+            <include layout="@layout/load_more" />
+        </com.fengda.app.view.pulltorefresh.PullLayout>
+
+
+    </com.fengda.app.view.statelayout.StateLayout>
+</RelativeLayout>

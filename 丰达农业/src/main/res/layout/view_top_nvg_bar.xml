@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vtnb_root"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/bg_main_bottom">
+
+    <RelativeLayout
+        android:id="@+id/vtnb_back"
+        android:layout_width="50dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_white_return" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/vtnb_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/tv_color2"
+        android:textSize="@dimen/size_17" />
+</RelativeLayout>

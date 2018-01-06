@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+       android:text="标题"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:textColor="@color/dialog_personal_msg"
+        android:textSize="@dimen/size_15" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingMultiplier="1.3"
+        android:gravity="center"
+        android:text="内容内容反对法大幅度反对法大幅度打发打发打发打发打发的打发打发的 "
+        android:textColor="@color/dialog_personal_msg"
+        android:textSize="@dimen/size_18" />
+
+
+</LinearLayout>

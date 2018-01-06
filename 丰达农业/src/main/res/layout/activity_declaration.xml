@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="true"
+        custom:title="@string/tv_72" />
+
+    <ScrollView
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_blank_color"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <com.fengda.app.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="报单账号"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/tv_declaration_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="65dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <com.fengda.app.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="持卡人姓名"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <EditText
+                    android:id="@+id/tv_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:hint="请输入消费银行卡持卡人姓名"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <com.fengda.app.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="银行卡号后四位"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <EditText
+                    android:id="@+id/tv_card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:hint="请输入消费银行卡号后四位"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_remaining"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <com.fengda.app.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="剩余额度"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/tv_remaining_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color33"
+                    android:textSize="@dimen/size_20" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/aser_divider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/ae_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="报单金额"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ae_amount"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_declaration_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:hint="0.00"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColor="@color/arp_text1"
+                        android:textColorHint="@color/hint_text_gray"
+                        android:textSize="44sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="11dp"
+                    android:text="上传POS机小票照片"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="187dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/aser_round_rect_border">
+
+                        <ImageView
+                            android:id="@+id/declaration_img"
+                            android:layout_width="187dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/receipt"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:id="@+id/frame_image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/autonym_add" />
+
+                        <ImageView
+                            android:id="@+id/show_translucent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/half_tran"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/confirm_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="22.5dp"
+                android:background="@drawable/bg_login_style"
+                android:gravity="center"
+                android:text="@string/tv_73"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_16" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

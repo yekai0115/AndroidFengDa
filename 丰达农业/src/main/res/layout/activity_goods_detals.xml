@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/map_return1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="31dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_goods"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/tishi_14"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_14" />
+
+                <View
+                    android:id="@+id/view_goods"
+                    android:layout_width="50dp"
+                    android:layout_height="2.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_interiener" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="31dp">
+
+                <TextView
+                    android:id="@+id/tv_detals"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/tishi_15"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_14" />
+
+                <View
+                    android:id="@+id/view_detals"
+                    android:layout_width="50dp"
+                    android:layout_height="2.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shape_interiener"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/shopping_cart" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/line_color" />
+        <LinearLayout
+            android:id="@+id/ll_contact_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+           >
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="28dp"
+                android:paddingRight="18dp"
+                android:drawableTop="@drawable/service"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:text="@string/contact_kefu"
+                android:textColor="@color/color32"
+                android:textSize="@dimen/size_12" />
+            <CheckBox
+                android:id="@+id/tv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="18dp"
+                android:paddingRight="28dp"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/collection_box"
+                android:gravity="center"
+                android:checked="false"
+                android:text="@string/collection"
+                android:textColor="@color/color32"
+                android:textSize="@dimen/size_12" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/ll_contact_linear"
+            android:gravity="center|right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_add_car"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bg_main_bottom50"
+                android:gravity="center"
+                android:text="@string/tishi_79"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/size_15"
+                />
+
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bg_main_bottom"
+                android:gravity="center"
+                android:text="@string/tishi_13"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_below="@id/rl_top">
+
+
+        <com.fengda.app.widget.MyScrollView
+            android:id="@+id/sv_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/top_nvg_bar"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/fl_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="375dp"
+                    android:orientation="vertical">
+
+                    <com.fengda.app.widget.viewpager.LoopViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.fengda.app.widget.viewpager.MaterialIndicator
+                        android:id="@+id/goodsIndicator"
+                        style="@style/MaterialIndicator.Demo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginBottom="17dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_goods_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="17.5dp"
+                    android:gravity="center|left"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="商品详情商品详情商品详情商品详情商品详情商品详情"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_16" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center|left"
+                        android:text="@string/tv_57"
+                        android:textColor="@color/tv_color3"
+                        android:textSize="@dimen/size_13" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:text="100"
+                        android:textColor="@color/tv_color3"
+                        android:textSize="@dimen/size_20" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/bg_blank_color" />
+
+                <TextView
+                    android:id="@+id/tv_guige"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@drawable/map_return"
+                    android:gravity="center|left"
+                    android:text="@string/tishi_18"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <LinearLayout
+                    android:id="@+id/ll_detal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/bg_blank_color"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="37dp"
+                        android:layout_height="1.5dp"
+                        android:background="@color/color8" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="@string/tishi_15"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <View
+                        android:layout_width="37dp"
+                        android:layout_height="1.5dp"
+                        android:background="@color/color8" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.fengda.app.widget.MyListView
+                        android:id="@+id/lv_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@color/line_color"
+                        android:dividerHeight="0.5dp"
+                        android:listSelector="@android:color/transparent"
+                        android:scrollbars="none" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.fengda.app.widget.MyScrollView>
+    </com.fengda.app.view.statelayout.StateLayout>
+
+</RelativeLayout>

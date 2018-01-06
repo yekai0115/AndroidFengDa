@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false" >
+
+
+
+
+
+    <stroke android:color="@color/line_e5" />
+
+    <gradient
+        android:startColor="@color/line_e5"
+        android:endColor="@color/line_e5"/>
+ 
+
+    <size
+        android:height="7dp"
+        android:width="7dp" />
+
+</shape>
+<!-- 圆形透明背景 -->

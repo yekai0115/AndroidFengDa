@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:right="@string/tv_34"
+        custom:rvisible="true"
+        custom:title="@string/tv_24" />
+
+    <ScrollView
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_blank_color"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:src="@drawable/earnings_purse" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/commodity_integral"
+                    android:textColor="@color/tv_color19"
+                    android:textSize="@dimen/size_14" />
+
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/ae_can_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/as_relative1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_receive_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="接收人"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <EditText
+                    android:id="@+id/ae_receive_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:layout_toRightOf="@id/tv_receive_mobile"
+                    android:hint="请输入接收人号码"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:textSize="@dimen/size_15" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/as_relative2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:id="@+id/ae_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="绑定银行卡"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/ae_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/ae_bank"
+                    android:text="添加银行卡"
+                    android:textColor="@color/bg_main_bottom"
+                    android:textSize="@dimen/size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/as_relative3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_bcast_lines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="剩余复投额度"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/tv_bcast_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_toRightOf="@id/tv_bcast_lines"
+                    android:text="19999"
+                    android:textColor="@color/color33"
+                    android:textSize="@dimen/size_17" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:id="@+id/ae_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="兑换金额"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ae_amount"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="18dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:focusableInTouchMode="true">
+
+                    <com.fengda.app.view.HandyTextView
+                        android:id="@+id/acb_tv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="¥"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="36sp" />
+
+                    <EditText
+                        android:id="@+id/act_exchange_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:hint="0.00"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColor="@color/arp_text1"
+                        android:textColorHint="@color/hint_text_gray"
+                        android:textSize="44sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+
+
+            <TextView
+                android:id="@+id/ex_remarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:text="@string/tishi_68"
+                android:textColor="@color/tv_color19"
+                android:textSize="@dimen/size_14" />
+
+            <Button
+                android:id="@+id/confirm_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="42.5dp"
+                android:background="@drawable/bg_login_style"
+                android:gravity="center"
+                android:text="@string/tv_23"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_16" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

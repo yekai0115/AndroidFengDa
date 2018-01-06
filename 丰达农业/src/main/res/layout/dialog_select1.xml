@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+        <com.fengda.app.view.HandyTextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/bg_main_bottom"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dp"
+            android:text="取消"/>
+        <com.fengda.app.view.HandyTextView
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/bg_main_bottom"
+            android:textSize="20sp"
+            android:layout_marginRight="15dp"
+            android:text="确定"/>
+    </RelativeLayout>
+    <com.wx.wheelview.widget.WheelView
+        android:id="@+id/dialog_select1_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" />
+</LinearLayout>

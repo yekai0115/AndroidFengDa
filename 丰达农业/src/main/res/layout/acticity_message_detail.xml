@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/tv_20" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+    <com.fengda.app.widget.StretchScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="31dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.fengda.app.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:text="尊敬的用户:"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/message_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/message_send_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="38dp"
+                    android:text="技术部"
+                    android:layout_gravity="right"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/message_send_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8.5dp"
+                    android:text="2017-11-11"
+                    android:layout_gravity="right"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+            </LinearLayout>
+    </LinearLayout>
+    </com.fengda.app.widget.StretchScrollView>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/tv_20" />
+
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/ly_main_weixin"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_blank_color"
+                android:orientation="vertical">
+
+                <com.fengda.app.view.pulltorefresh.PullLayout
+                    android:id="@+id/product_refresh_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <include layout="@layout/refresh_head" />
+
+                    <com.fengda.app.view.pullableview.PullableListView
+                        android:id="@+id/list_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:divider="@null" />
+
+                    <include layout="@layout/load_more" />
+                </com.fengda.app.view.pulltorefresh.PullLayout>
+            </RelativeLayout>
+
+
+        </FrameLayout>
+    </com.fengda.app.view.statelayout.StateLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+     <!--按钮按下时的效果 -->
+    <item android:state_pressed="true">
+        <shape>
+            <!-- 渐变： 以圆中心 向周围扩散 -->
+			<gradient android:startColor="@color/bg_main_bottom" android:endColor="@color/bg_main_bottom"
+			    android:type="radial" android:gradientRadius="70"/>
+			<corners android:radius="4dp"/>
+			<stroke android:width="0.5dp" android:color="@color/bg_main_bottom"></stroke>
+			
+		</shape>
+    </item>
+    
+    
+    <!-- 默认效果   #FF9100    @color/white-->
+    <item>
+        <shape>
+			<gradient android:startColor="@color/bg_main_bottom" android:endColor="@color/bg_main_bottom"  android:angle="270"/>
+			<corners android:radius="4dp"/>
+			<stroke android:width="0.5dp" android:color="@color/bg_main_bottom"></stroke>
+			
+		</shape>
+    </item>
+    
+    
+</selector>
+
+<!-- 浅灰色背景，边框是灰色-->

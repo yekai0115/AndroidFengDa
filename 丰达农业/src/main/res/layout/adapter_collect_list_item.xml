@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="12.5dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="12.5dp">
+
+
+    <CheckBox
+        android:id="@+id/cb_check"
+        style="@style/CommCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingRight="9.5dp"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        android:textColor="@color/tv_color2"
+        android:textSize="@dimen/size_15" />
+
+
+    <ImageView
+        android:id="@+id/img_goods_pic"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12.5dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="场v许昌v场v场v场v场v场v场v场v差山东师范似懂非懂v"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_gravity="center|left|bottom"
+            android:gravity="center|left|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="¥"
+                android:gravity="center|left|bottom"
+                android:layout_gravity="center|left|bottom"
+                android:textColor="@color/tv_color3"
+                android:textSize="@dimen/size_13" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:gravity="center|left|bottom"
+                android:text="100"
+                android:textColor="@color/tv_color3"
+                android:textSize="@dimen/size_18" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

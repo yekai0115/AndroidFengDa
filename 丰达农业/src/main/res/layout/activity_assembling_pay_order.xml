@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/tishi_82" />
+
+
+    <LinearLayout
+        android:id="@+id/lineart_ceotent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_nvg_bar"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="26.5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_57"
+                android:textColor="@color/bg_main_bottom2"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_order_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="3000"
+                android:textColor="@color/bg_main_bottom2"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="21dp"
+            android:paddingTop="12dp"
+            android:text="@string/tv_58"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_15" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/bg_blank_color"/>
+        <RelativeLayout
+            android:id="@+id/rl_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/buy_weixin"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_60"
+                android:textColor="@color/tv_color2"
+                android:textSize="@dimen/size_15" />
+
+
+            <CheckBox
+                android:id="@+id/cb_weixin"
+                style="@style/payCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:clickable="false"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="53dp"
+                android:background="@color/line_color" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_zhifubao"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/buy_zhifubao"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_61"
+                android:textColor="@color/tv_color2"
+                android:textSize="@dimen/size_15" />
+
+
+            <CheckBox
+                android:id="@+id/cb_zhifubao"
+                style="@style/payCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:clickable="false"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="53dp"
+                android:background="@color/line_color" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_yinlian"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/buy_card"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_62"
+                android:textColor="@color/tv_color2"
+                android:textSize="@dimen/size_15" />
+
+
+            <CheckBox
+                android:id="@+id/cb_card"
+                style="@style/payCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:clickable="false"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="53dp"
+                android:background="@color/line_color" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_buy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="56.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/lineart_ceotent"
+        android:background="@color/bg_main_bottom"
+        android:gravity="center"
+        android:text="@string/tishi_89"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_16" />
+</RelativeLayout>

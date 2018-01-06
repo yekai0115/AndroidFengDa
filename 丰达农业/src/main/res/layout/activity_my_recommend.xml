@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        custom:right="@string/tishi_21"
+        custom:rvisible="true"
+        custom:title="@string/tishi_20" />
+
+    <com.fengda.app.view.pulltorefresh.PullLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/refresh_head" />
+
+        <com.fengda.app.view.pullableview.PullableRefreshScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_recommend_color"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/recommend_banner" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="13.75dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+                            <ImageView
+                                android:id="@+id/a_recommend_qrcode"
+                                android:layout_width="165dp"
+                                android:layout_height="165dp"
+                                android:gravity="center" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_save"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|bottom"
+                            android:paddingBottom="9dp"
+                            android:paddingTop="12dp"
+                            android:gravity="center_horizontal"
+                            android:text="长按保存二维码"
+                            android:textColor="@color/transparent50"
+                            android:textSize="@dimen/size_15" />
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/recommend_shape">
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16.5dp"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/label"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/tishi_87"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_17" />
+
+                    </FrameLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/tishi_23"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_15" />
+
+                        <TextView
+                            android:id="@+id/tv_recommend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="18813904075"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_15" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/tishi_24"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_15" />
+
+                        <TextView
+                            android:id="@+id/tv_recommend_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="100"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_14"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/tishi_25"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="29dp"
+                    android:background="@drawable/recommend_shape"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16.5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/label" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/tishi_26"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_17" />
+
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/tishi_27"
+                            android:textColor="@color/text_color8"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textSize="@dimen/size_15" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="@string/tishi_28"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_15" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="@string/tishi_29"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_15" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="@string/tishi_30"
+                            android:textColor="@color/text_color8"
+                            android:textSize="@dimen/size_15" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_share"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/recommend_friendse_shape"
+                    android:text="@string/tishi_39"
+                    android:textColor="@color/gray_33"
+                    android:textSize="16sp" />
+
+
+
+            </LinearLayout>
+        </com.fengda.app.view.pullableview.PullableRefreshScrollView>
+
+        <include layout="@layout/load_more" />
+
+
+    </com.fengda.app.view.pulltorefresh.PullLayout>
+
+
+</LinearLayout>

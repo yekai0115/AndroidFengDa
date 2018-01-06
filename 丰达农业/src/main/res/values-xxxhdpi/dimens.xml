@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="slidingmenu_offset">80dp</dimen>
+    <dimen name="slidingmenu_aboveset">20dp</dimen>
+    
+    <dimen name="shadow_width">5dp</dimen>
+    
+    
+        <!-- PickerUI items dimens-->
+    <dimen name="height_normal_item_pickerui">40dp</dimen>
+    <dimen name="textsize_center_pickerui_item">25dp</dimen>
+    <dimen name="textsize_near_center_pickerui_item">17dp</dimen>
+    <dimen name="textsize_far_center_pickerui_item">15dp</dimen>
+    <dimen name="textsize_small_pickerui_item">11dp</dimen>
+
+    <!-- PickerUI lines dimens -->
+    <dimen name="margin_top_line_top_pickerui">80dp</dimen>
+    <dimen name="margin_top_line_bottom_pickerui">120dp</dimen>
+    <dimen name="height_lines_center_pickerui">1dp</dimen>
+
+    <!-- PickerUI panel dimens -->
+    <dimen name="height_hidden_panel_pickerui">200dp</dimen>
+
+    <dimen name="divider_line_height">0.5dp</dimen>
+    <dimen name="divider_line_height1">1dp</dimen>
+    
+     <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">45dp</dimen>
+    <!-- 顶部按钮paddingLeft -->
+    <dimen name="pickerview_topbar_paddingleft">15dp</dimen>
+    <!-- 顶部按钮paddingRight -->
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">20sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+    <dimen name="tv_size">38sp</dimen>
+    
+    <dimen name="size_8">9.5sp</dimen>
+    <dimen name="size_9">10sp</dimen>
+    <dimen name="size_10">12sp</dimen>
+    <dimen name="size_11">13sp</dimen>
+    <dimen name="size_bottom">13sp</dimen>
+    <dimen name="size_12">14sp</dimen>
+    <dimen name="size_13">14.5sp</dimen>
+    <dimen name="size_14">15sp</dimen>
+    <dimen name="size_15">17sp</dimen>
+    <dimen name="size_16">18sp</dimen>
+    <dimen name="size_17">19sp</dimen>
+    <dimen name="size_18">20sp</dimen>
+    <dimen name="size_20">21sp</dimen>
+    <dimen name="size_60">62sp</dimen>
+    <dimen name="text_pdding">15dp</dimen>
+    <dimen name="text_pdding2">0dp</dimen>
+
+
+
+
+
+
+
+
+</resources>

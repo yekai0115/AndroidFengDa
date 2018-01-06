@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="28dp"
+            android:background="@color/gray_line_color" />
+
+        <ImageView
+            android:id="@+id/img_point"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/bg_cirle_logistics_style"
+            android:visibility="gone"
+             />
+
+        <ImageView
+            android:id="@+id/img_point_gray"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="24.5dp"
+            android:background="@drawable/bg_cirle_logistics_default_style"
+            />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28dp"
+            android:background="#dddddd" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21.5px"
+        android:layout_marginRight="23.5dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="22dp">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123125123"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/bg_main_bottom"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:gravity="right|center_vertical"
+            android:text="2011"
+            android:textColor="@color/tv_color6"
+            android:textSize="@dimen/size_11" />
+    </LinearLayout>
+</LinearLayout><!-- 引导页 -->

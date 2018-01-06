@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/tishi_80" />
+
+    <com.fengda.app.view.HorizontalScrollMenu
+        android:id="@+id/hsm_container"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_height="45dp" />
+
+
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.fengda.app.view.pulltorefresh.PullToRefreshLayout
+                android:id="@+id/refresh_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <include layout="@layout/refresh_head" />
+
+
+                <com.fengda.app.view.pullableview.PullableListView
+                    android:id="@+id/lv_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@color/toming"
+                    android:divider="@color/line_color"
+                    android:dividerHeight="0.5dp"
+                    android:listSelector="@color/toming"
+                    android:scrollbars="none" />
+
+
+                <include layout="@layout/load_more" />
+            </com.fengda.app.view.pulltorefresh.PullToRefreshLayout>
+        </FrameLayout>
+    </com.fengda.app.view.statelayout.StateLayout>
+
+</LinearLayout>

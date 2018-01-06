@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+
+    <item >
+        <shape>
+			<gradient android:startColor="@color/search_bg_gray" android:endColor="@color/search_bg_gray"  android:angle="360"/>
+			<stroke android:width="0.5dp" android:color="@color/search_bg_gray" ></stroke>
+			
+		</shape>
+    </item>
+    
+    
+</selector>

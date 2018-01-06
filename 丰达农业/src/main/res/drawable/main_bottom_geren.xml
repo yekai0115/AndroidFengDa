@@ -1,0 +1,8 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true"
+        android:drawable="@drawable/home_personal_center1" /> <!-- pressed -->
+    <item android:state_selected="true"
+        android:drawable="@drawable/home_personal_center1" /> <!-- focused -->
+    <item android:drawable="@drawable/home_personal_center"
+        android:state_selected="false"/> <!-- default -->
+</selector>

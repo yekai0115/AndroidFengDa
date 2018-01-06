@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:title="@string/tv_11" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_13"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_15" />
+
+        <EditText
+            android:id="@+id/ed_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/tv_14"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:paddingLeft="30dp"
+            android:singleLine="true"
+            android:textColor="@color/tv_color2"
+            android:textColorHint="@color/tv_color4"
+            android:textSize="@dimen/size_15" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_confirm_pay_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_6"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_15" />
+
+        <EditText
+            android:id="@+id/ed_repwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/tv_15"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:paddingLeft="30dp"
+            android:singleLine="true"
+            android:textColor="@color/tv_color2"
+            android:textColorHint="@color/tv_color4"
+            android:textSize="@dimen/size_15" />
+
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_set"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/bg_login_defaultstyle"
+        android:text="@string/tv_4"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

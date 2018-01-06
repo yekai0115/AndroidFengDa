@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color7"
+            android:textSize="@dimen/size_15" />
+
+
+        <EditText
+            android:id="@+id/ed_search"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="9dp"
+            android:layout_toLeftOf="@id/tv_cancle"
+            android:layout_toRightOf="@id/rl_back"
+            android:background="@drawable/bg_search_gray"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="5dp"
+            android:gravity="center|left"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:textColor="@color/tv_color5"
+            android:textSize="@dimen/size_15" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color2" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_resou"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:gravity="center|left"
+                android:text="@string/search_history"
+                android:textColor="@color/tv_color1"
+                android:textSize="@dimen/size_15" />
+
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:paddingBottom="15dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp"
+                android:paddingTop="29dp"
+                android:src="@drawable/search_delete" />
+        </RelativeLayout>
+
+
+        <com.fengda.app.view.flowlayout.TagFlowLayout
+            android:id="@+id/id_flowlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            zhy:max_select="-1" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

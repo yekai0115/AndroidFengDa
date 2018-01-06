@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <!-- this is part 1 -->
+    <com.fengda.app.widget.viewpager.ControlScrollViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_e3" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_shouye"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/main_bottom_home"
+            android:gravity="center"
+            android:text="@string/tv_17"
+            android:textColor="@drawable/main_bottom_textcolor" />
+
+
+        <TextView
+            android:id="@+id/tv_fenlei"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/main_bottom_new"
+            android:gravity="center"
+            android:text="@string/tishi_73"
+            android:textColor="@drawable/main_bottom_textcolor" />
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_car"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/main_bottom_car"
+            android:gravity="center"
+            android:text="@string/tishi_75"
+            android:textColor="@drawable/main_bottom_textcolor" />
+
+
+        <TextView
+            android:id="@+id/tv_geren"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/main_bottom_geren"
+            android:gravity="center"
+            android:text="@string/tv_19"
+            android:textColor="@drawable/main_bottom_textcolor" />
+
+    </LinearLayout>
+
+</LinearLayout>

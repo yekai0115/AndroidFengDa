@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fengda.app.view.statelayout.StateLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.fengda.app.widget.StretchScrollView
+            android:id="@+id/scroll_detal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_blank_color"
+                android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="18dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:text="物流公司:"
+                                android:textColor="@color/tv_color2"
+                                android:textSize="@dimen/size_12" />
+
+                            <TextView
+                                android:id="@+id/tv_company"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center|left|top"
+                                android:textColor="@color/gray_33"
+                                android:textSize="@dimen/size_12" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_dd"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:text="运单编号:"
+                                android:textColor="@color/tv_color16"
+                                android:textSize="@dimen/size_12" />
+
+                            <TextView
+                                android:id="@+id/tv_wl_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center|left"
+                                android:textColor="@color/tv_color16"
+                                android:textSize="@dimen/size_12" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:text="官方电话:"
+                                android:textColor="@color/tv_color16"
+                                android:textSize="@dimen/size_12" />
+
+                            <TextView
+                                android:id="@+id/tv_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:textColor="@color/tv_color16"
+                                android:textSize="@dimen/size_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/bg_blank_color" />
+
+                <ListView
+                    android:id="@+id/lv_wuliu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@color/white"
+                    android:dividerHeight="0dp"
+                    android:listSelector="@color/toming"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </com.fengda.app.widget.StretchScrollView>
+    </FrameLayout>
+
+</com.fengda.app.view.statelayout.StateLayout>

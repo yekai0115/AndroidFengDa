@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="false"
+        custom:title="@string/tv_mine_54" />
+
+
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/ly_main_weixin"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_blank_color"
+                android:orientation="vertical">
+
+                <com.fengda.app.view.pulltorefresh.PullLayout
+                    android:id="@+id/product_refresh_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <include layout="@layout/refresh_head" />
+
+                    <com.fengda.app.view.pullableview.PullableRefreshScrollView
+                        android:id="@+id/mScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:paddingBottom="20dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/myteam" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="9.5dp"
+                                    android:layout_marginTop="18dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_agent_level"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/tv_color2"
+                                        android:textSize="@dimen/size_16"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="bottom"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="业绩:"
+                                            android:textColor="@color/tv_color2"
+                                            android:textSize="@dimen/size_16" />
+
+                                        <TextView
+                                            android:id="@+id/tv_agent_performance"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="@color/tv_color2"
+                                            android:textSize="@dimen/size_16"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/line_color" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_phone_number"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="电话号码:"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+
+                                    <TextView
+                                        android:id="@+id/tv_phone_number"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="18779372838"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_13" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_first_member"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="一级会员:"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+
+                                    <TextView
+                                        android:id="@+id/tv_first_member_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="10人"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_second_member"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="二级会员:"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+
+                                    <TextView
+                                        android:id="@+id/tv_second_member_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="10人"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_third_member"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="三级会员:"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+
+                                    <TextView
+                                        android:id="@+id/tv_third_member_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="10人"
+                                        android:textColor="@color/color2"
+                                        android:textSize="@dimen/size_12" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_team_to_fruit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_team_to_fruit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@color/color30"
+                                        android:textSize="@dimen/size_17" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="9dp"
+                                        android:gravity="center"
+                                        android:text="@string/tishi_84"
+                                        android:textColor="@color/color29"
+                                        android:textSize="@dimen/size_13" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_team_fruit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_team_fruit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@color/color30"
+                                        android:textSize="@dimen/size_17" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="9dp"
+                                        android:gravity="center"
+                                        android:text="@string/tishi_85"
+                                        android:textColor="@color/color29"
+                                        android:textSize="@dimen/size_13" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.fengda.app.widget.MyListView
+                                android:id="@+id/list_team"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:cacheColorHint="#00000000"
+                                android:divider="@color/line_color"
+                                android:dividerHeight="0.5dp"
+                                android:listSelector="@android:color/transparent"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+                    </com.fengda.app.view.pullableview.PullableRefreshScrollView>
+
+                    <include layout="@layout/load_more" />
+                </com.fengda.app.view.pulltorefresh.PullLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </com.fengda.app.view.statelayout.StateLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:rvisible="true"
+        custom:right="@string/tv_52"
+        custom:title="@string/tishi_81" />
+
+<EditText
+    android:id="@+id/ed_nick"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="15dp"
+    android:paddingLeft="15dp"
+    android:textColor="@color/tv_color2"
+    android:textColorHint="@color/color27"
+    android:textSize="@dimen/size_15"
+    android:background="@color/white"
+
+    />
+  
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:orientation="horizontal"
+        android:background="@color/color33"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp">
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/return_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="排行榜"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="30sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="49dp"
+            android:background="@drawable/ranking_list"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="18dp"
+        android:paddingRight="22.5dp">
+        <ImageView
+            android:id="@+id/img_my_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/one"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_my_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/tv_color2"
+            android:textSize="@dimen/size_16"/>
+        <ImageView
+            android:id="@+id/img_mine_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="15dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="9.5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/tv_team_mine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_16"  />
+                <com.fengda.app.view.HandyTextView
+                    android:id="@+id/tv_team_mine_leavel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人业绩:"
+                    android:textSize="@dimen/size_14"
+                    android:textColor="@color/tv_color2"/>
+                <TextView
+                    android:id="@+id/tv_team_mine_performance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_14"
+                    android:textColor="@color/tv_color2"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.fengda.app.view.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/ly_main_weixin"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_blank_color"
+                android:orientation="vertical">
+
+                <com.fengda.app.view.pulltorefresh.PullLayout
+                    android:id="@+id/product_refresh_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <include layout="@layout/refresh_head" />
+
+                    <com.fengda.app.view.pullableview.PullableListView
+                        android:id="@+id/list_team_leaderboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:divider="@color/line_color"
+                        android:dividerHeight="0.5dp" />
+
+                    <include layout="@layout/load_more" />
+                </com.fengda.app.view.pulltorefresh.PullLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </com.fengda.app.view.statelayout.StateLayout>
+
+
+</LinearLayout>

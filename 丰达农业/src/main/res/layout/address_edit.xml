@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blank_color"
+    android:orientation="vertical">
+
+    <com.fengda.app.widget.TopNvgBar5
+        android:id="@+id/top_nvg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:lvisible="true"
+        custom:right="@string/save"
+        custom:rvisible="true"
+        custom:title="@string/add_dizhi" />
+
+    <com.fengda.app.widget.StretchScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center|left"
+                        android:text="@string/shouhuoren"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <EditText
+                            android:id="@+id/ed_userName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@null"
+                            android:gravity="center|left"
+                            android:inputType="text"
+                            android:maxLength="5"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textColor="@color/tv_color2"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/img_name_close"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/img_notice_close"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_name_tishi"
+                    android:layout_width="40dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|right"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/img_notice_close" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/line_color" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center|left"
+                        android:text="@string/phone"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <EditText
+                            android:id="@+id/ed_phone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@null"
+                            android:gravity="center|left"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textColor="@color/tv_color2"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/img_phone_close"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/img_notice_close"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_phone_tishi"
+                    android:layout_width="40dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|right"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/img_notice_close" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/line_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center|left"
+                        android:text="@string/diqu"
+                        android:textColor="@color/tv_color2"
+                        android:textSize="@dimen/size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_chose_ssq"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/icon_right"
+                        android:focusable="false"
+                        android:gravity="center|right"
+                        android:hint="@string/diqu"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_destion_tishi"
+                    android:layout_width="40dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|right"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/img_notice_close" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white">
+
+
+                <EditText
+                    android:id="@+id/ed_detalDes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center|left|top"
+                    android:hint="@string/dizhi"
+                    android:maxLength="50"
+                    android:paddingTop="15dp"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_dizhi_tishi"
+                    android:layout_width="40dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|right|bottom"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/img_detaldes_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/img_notice_close" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center|left"
+                    android:text="@string/set_moren"
+                    android:textColor="@color/tv_color2"
+                    android:textSize="@dimen/size_15" />
+
+                <com.fengda.app.widget.swichbutton.ToggleButton
+                    android:id="@+id/switch_moren"
+                    android:layout_width="54dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/delete_dizhi"
+                android:textColor="@color/bg_main_bottom"
+                android:textSize="@dimen/size_15" />
+
+
+        </LinearLayout>
+    </com.fengda.app.widget.StretchScrollView>
+
+</LinearLayout>
